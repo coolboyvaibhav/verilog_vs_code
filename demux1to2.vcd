@@ -1,0 +1,44 @@
+$date
+	Fri Dec 22 12:28:24 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module stimulus $end
+$var wire 2 ! out [1:0] $end
+$var reg 1 " in $end
+$var reg 1 # sel $end
+$scope module dut $end
+$var wire 1 $ in $end
+$var wire 2 % out [1:0] $end
+$var wire 1 & sel $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0&
+b1 %
+1$
+0#
+1"
+b1 !
+$end
+#5
+b10 !
+b10 %
+1#
+1&
+#15
+b0 !
+b0 %
+0#
+0&
+0"
+0$
+#20
+1#
+1&
