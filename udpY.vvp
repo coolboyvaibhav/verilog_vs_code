@@ -1,0 +1,68 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00B036C0 .scope module, "top" "top" 2 31;
+ .timescale 0 0;
+UDP_udpY .udp/comb "udpY", 4
+ ,"1?1?1"
+ ,"10011"
+ ,"01101"
+ ,"00??0"
+ ,"010?0"
+ ,"110?0"
+ ,"01110"
+ ,"10000";
+L_00B03748 .udp UDP_udpY, v00983610_0, v00B0ED60_0, v00B0EDB8_0, v00B0EE10_0;
+v00983610_0 .var "A", 0 0;
+v00B0ED60_0 .var "B", 0 0;
+v00B0EDB8_0 .var "C", 0 0;
+v00B0EE10_0 .var "D", 0 0;
+v00B0EE68_0 .net "Y", 0 0, L_00B03748; 1 drivers
+    .scope S_00B036C0;
+T_0 ;
+    %vpi_call 2 39 "$dumpfile", "udPY.vcd";
+    %vpi_call 2 40 "$dumpvars", 1'sb0, S_00B036C0;
+    %set/v v00983610_0, 1, 1;
+    %set/v v00B0ED60_0, 0, 1;
+    %set/v v00B0EDB8_0, 0, 1;
+    %set/v v00B0EE10_0, 1, 1;
+    %delay 5, 0;
+    %set/v v00983610_0, 0, 1;
+    %set/v v00B0ED60_0, 1, 1;
+    %set/v v00B0EDB8_0, 1, 1;
+    %set/v v00B0EE10_0, 0, 1;
+    %delay 5, 0;
+    %set/v v00983610_0, 0, 1;
+    %set/v v00B0ED60_0, 1, 1;
+    %set/v v00B0EDB8_0, 0, 1;
+    %set/v v00B0EE10_0, 0, 1;
+    %delay 5, 0;
+    %set/v v00983610_0, 1, 1;
+    %set/v v00B0ED60_0, 1, 1;
+    %set/v v00B0EDB8_0, 1, 1;
+    %set/v v00B0EE10_0, 1, 1;
+    %delay 5, 0;
+    %set/v v00983610_0, 0, 1;
+    %set/v v00B0ED60_0, 0, 1;
+    %set/v v00B0EDB8_0, 1, 1;
+    %set/v v00B0EE10_0, 0, 1;
+    %delay 5, 0;
+    %set/v v00983610_0, 1, 1;
+    %set/v v00B0ED60_0, 0, 1;
+    %set/v v00B0EDB8_0, 1, 1;
+    %set/v v00B0EE10_0, 1, 1;
+    %delay 5, 0;
+    %set/v v00983610_0, 0, 1;
+    %set/v v00B0ED60_0, 1, 1;
+    %set/v v00B0EDB8_0, 0, 1;
+    %set/v v00B0EE10_0, 1, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "udpY.v";
