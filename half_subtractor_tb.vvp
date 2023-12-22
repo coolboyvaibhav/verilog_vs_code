@@ -1,0 +1,48 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01168350 .scope module, "top" "top" 2 2;
+ .timescale 0 0;
+v01163C98_0 .net "Bout", 0 0, L_0116D6D8; 1 drivers
+v01163CF0_0 .net "Diff", 0 0, L_011616E8; 1 drivers
+v01163D48_0 .var "X", 0 0;
+v0116D5A0_0 .var "Y", 0 0;
+S_01168EC8 .scope module, "dut" "half_sub" 2 7, 3 12, S_01168350;
+ .timescale 0 0;
+L_011616E8 .functor XOR 1, v01163D48_0, v0116D5A0_0, C4<0>, C4<0>;
+L_0116D6A0 .functor NOT 1, v01163D48_0, C4<0>, C4<0>, C4<0>;
+L_0116D6D8 .functor AND 1, L_0116D6A0, v0116D5A0_0, C4<1>, C4<1>;
+v01168F50_0 .alias "Bout", 0 0, v01163C98_0;
+v011615E0_0 .alias "Diff", 0 0, v01163CF0_0;
+v01161638_0 .net "X", 0 0, v01163D48_0; 1 drivers
+v01161690_0 .net "Y", 0 0, v0116D5A0_0; 1 drivers
+v01163C40_0 .net *"_s2", 0 0, L_0116D6A0; 1 drivers
+    .scope S_01168350;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "half_sub.vcd";
+    %vpi_call 2 13 "$dumpvars", 1'sb0, S_01168350;
+    %set/v v01163D48_0, 0, 1;
+    %set/v v0116D5A0_0, 0, 1;
+    %delay 5, 0;
+    %set/v v01163D48_0, 0, 1;
+    %set/v v0116D5A0_0, 1, 1;
+    %delay 5, 0;
+    %set/v v01163D48_0, 1, 1;
+    %set/v v0116D5A0_0, 0, 1;
+    %delay 5, 0;
+    %set/v v01163D48_0, 1, 1;
+    %set/v v0116D5A0_0, 1, 1;
+    %delay 5, 0;
+    %set/v v01163D48_0, 0, 1;
+    %set/v v0116D5A0_0, 0, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_half_subractor.v";
+    "./half_subtractor.v";

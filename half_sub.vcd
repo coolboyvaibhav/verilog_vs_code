@@ -1,0 +1,51 @@
+$date
+	Fri Dec 22 11:16:12 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module top $end
+$var wire 1 ! Bout $end
+$var wire 1 " Diff $end
+$var reg 1 # X $end
+$var reg 1 $ Y $end
+$scope module dut $end
+$var wire 1 ! Bout $end
+$var wire 1 " Diff $end
+$var wire 1 % X $end
+$var wire 1 & Y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#5
+1"
+1!
+1$
+1&
+#10
+0!
+0$
+0&
+1#
+1%
+#15
+0"
+1$
+1&
+#20
+0$
+0&
+0#
+0%
