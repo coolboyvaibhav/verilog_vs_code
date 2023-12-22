@@ -1,0 +1,72 @@
+$date
+	Fri Dec 22 14:16:31 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module top $end
+$var wire 1 ! Out $end
+$var reg 16 " Data [0:15] $end
+$scope module dut $end
+$var wire 16 # Data [0:15] $end
+$var wire 1 ! Out $end
+$var reg 5 $ count [0:4] $end
+$var integer 32 % i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx %
+bx $
+bx #
+bx "
+x!
+$end
+#5
+1!
+b10000 %
+b1001 $
+b1001000101111101 "
+b1001000101111101 #
+#10
+0!
+b10000 %
+b1000 $
+b101010101010101 "
+b101010101010101 #
+#15
+1!
+b10000 %
+b1010 $
+b1111001101010101 "
+b1111001101010101 #
+#20
+b10000 %
+b1011 $
+b10111111011110 "
+b10111111011110 #
+#25
+b10000 %
+b10000 $
+b1111111111111111 "
+b1111111111111111 #
+#30
+b10000 %
+b1100 $
+b1111010110101111 "
+b1111010110101111 #
+#35
+0!
+b10000 %
+b111 $
+b1111100000110000 "
+b1111100000110000 #
+#40
+b10000 %
+b0 $
+b0 "
+b0 #
