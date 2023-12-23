@@ -5,6 +5,11 @@ file name: hello_world.v
 
  Print Hello world in verilog.
 
+## Half Adder :
+file name: half_adder.v
+
+Sum = A XOR B  
+Carry = A AND B 
 ## Digital Lock: 
 file name : dlock.v
 
@@ -41,4 +46,32 @@ An external signal Start will start the division operation, and registers N and 
 
  Important Note: Please use variables Nw and Qw as the output interface of registers N and Q respectively inside div_datapath module. This is essential for the verification of your design using the configured testbench.
 
+
+# ESDCS lab
+## 8 bit ripple carry adder
+file name : adder.v  
+
+
+
+
+## 8 bit counter
+file name : counter.v  
+In the next part of this tutorial, we compile and simulate an 8-bit counter design with design and 
+testbench modules specified in separate Verilog source files. We also view the simulation waveforms.
+Create a file named counter.v with the following content:
+module counter (out, CLK, RST_N);
+
+# FPGA Questions
+## Exercise 1
+file name : ripple_adder_4bit.v  
+
+Write a Verilog gate level model for a 4-bit ripple adder. Do the functional and 
+timing simulation. Analyze which input takes maximum delay and give it in testbench 
+along with few other inputs and show the post-routing timing delays in report. Target 
+Device is Xilinx Artix-7 XC7A35T- ICPG236C (Family Artix-7, Part XC7A35T, 
+Package CPG236, Speed Grade -1
+
+$ Sum = x' y' z+x' yz+xy' z'+xyz $  
+
+$ Carry = xy+xz+yz $  
 
