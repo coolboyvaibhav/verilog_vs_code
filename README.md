@@ -88,4 +88,15 @@ file name : mux4to1.v
 
 
 
+## Exercise 3
+Write Verilog model with continuous assignment for a 4-bit carry look-ahead adder. 
+Do the functional and timing simulation. Use the same input combination as in 
+Exercise 1. Compare the delays and note them. Target Device is Xilinx Artix-7 
+XC7A35T- ICPG236C (Family Artix-7, Part XC7A35T, Package CPG236, Speed 
+Grade -1
+
+file name : carry_look_ahead_adder.v  
+
+
+
 

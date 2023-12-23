@@ -7,6 +7,7 @@ output [3:0] y;
 input [3:0] i0,i1;
 input sel;
 
+
 assign y=(i0 & (~sel)) | (i1 & (sel))  ;
 
 
@@ -43,15 +44,15 @@ initial begin
     $dumpfile("mux4to1.vcd");
     $dumpvars(0,stimulus);
     i0=1;i1=2;i2=2;i3=3;
-    s0=0;s1=0;
+    s0=1'b0;s1=1'b0;
     #5
-    s0=1;s1=0;
+    s0=1'b1;s1=1'b0;
     #5
-    s0=0;s1=1;
+    s0=1'b0;s1=1'b1;
     #5
-    s0=1;s1=1;
+    s0=1'b1;s1=1'b1;
     #5
-    s0=0;s1=0;
+    s0=1'b0;s1=1'b0;
 
 end
 always @(i0 or i1 or i2 or i3 or s0 or s1) begin
