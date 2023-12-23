@@ -1,4 +1,18 @@
-## Division by Repeated Subtraction
+# Practice questions of  Verilog 
+
+
+## Digital Lock: 
+file name : dlock.v
+
+It is required to implement a digital lock that will accept a specific bit sequence  “101100” through an input button “b_in” serially in synchronism with the negative edge of an input clock, and will generate an “unlock” signal “1” as output; for any other bit sequence the “unlock” signal will remain at logic “0”.  An active low “clear” signal is used to asynchronously reset the lock in its initial/default state.
+
+Write a Verilog module to implement the specification as Moore machine using the following template:
+    module dlock (unlock, b_in, clear, clk);
+
+
+## Division by Repeated Subtraction :
+file name : division.v
+
 It is required to design an 8-bit divider by implementing  the data path and control path separately. The operation will take as inputs divisor p and dividend n, and provides outputs quotient q and remainder r such that n = p x q + r. At the beginning two registers P and N will be loaded with p and n respectively. At each iteration p will be subtracted from N, storing the result back in N, as long as p <= N, and also increment a counter Q that is initialized to 0. At the end, Q will contain the quotient (q), and N will contain the remainder (r).
 
 
@@ -15,6 +29,7 @@ The data path will consist of two 8-bit registers N and  P, an 8-bit counter Q, 
 | Stop   | Stop computing if comparator output PgtN is 0.  |
 
 <!-- ![Alt text](C:\iverilog\bin\iverilog_test\control_flow3.png "a title") -->
+![Memory models](/resources/images/control_flow3.png)<br>
 
 An external signal Start will start the division operation, and registers N and P are loaded with inputs provided through common data input, Data_in. Write Verilog modules to implement all the component hardware units and use them as building blocks to design data path and control path as per the following template:
                     module div_datapath (PgtN, LoadN, LoadS, LoadP, Clear, IncQ, Data_in, Clk);
