@@ -75,3 +75,17 @@ $ Sum = x' y' z+x' yz+xy' z'+xyz $
 
 $ Carry = xy+xz+yz $  
 
+## Exercise 2
+Write Verilog code to implement a 4-bit, 4-to-1 multiplexer with structural design (4-
+to-1 multiplexer should be made with 2-to-1 multiplexer). Do the functional and 
+timing simulation. Target Device is Xilinx Artix-7 XC7A35T- ICPG236C (Family 
+Artix-7, Part XC7A35T, Package CPG236, Speed Grade -1)
+
+file name : mux4to1.v  
+
+### 2-to-1 mux
+**y=I0.sel-bar+I1.sel** 
+
+
+
+
