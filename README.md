@@ -1,5 +1,9 @@
 # Practice questions of  Verilog 
 
+## Hello World :
+file name: hello_world.v
+
+ Print Hello world in verilog.
 
 ## Digital Lock: 
 file name : dlock.v
