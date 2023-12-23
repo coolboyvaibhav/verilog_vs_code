@@ -1,4 +1,4 @@
-## Division by Repeated Subtraction
+# Division by Repeated Subtraction
 It is required to design an 8-bit divider by implementing  the data path and control path separately. The operation will take as inputs divisor p and dividend n, and provides outputs quotient q and remainder r such that n = p x q + r. At the beginning two registers P and N will be loaded with p and n respectively. At each iteration p will be subtracted from N, storing the result back in N, as long as p <= N, and also increment a counter Q that is initialized to 0. At the end, Q will contain the quotient (q), and N will contain the remainder (r).
 
 
