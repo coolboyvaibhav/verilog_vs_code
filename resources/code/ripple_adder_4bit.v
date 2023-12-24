@@ -20,13 +20,13 @@ module ripple_adder_4bit (
     sum,cout,A,B,cin
 );
 
-output [0:3] sum;
+output [3:0] sum;
 output cout;
-input [0:3] A,B;
+input [3:0] A,B;
 input cin;
 
 //wire declartions
-wire [0:2] c;
+wire [2:0] c;
 
 //instantiating lower modules
 full_adder fa1(sum[0],c[0],A[0],B[0],cin);
@@ -40,10 +40,10 @@ endmodule
 //stimulus module
 module stimulus;
 
-reg [0:3] A,B;    
+reg [3:0] A,B;    
 reg cin;
 
-wire [0:3] sum;
+wire [3:0] sum;
 wire cout;
 
 
