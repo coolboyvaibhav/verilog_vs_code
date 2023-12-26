@@ -10,6 +10,11 @@ file name: half_adder.v
 
 Sum = A XOR B  
 Carry = A AND B 
+
+## Traffic signal controller using finite state machine approach:
+
+
+
 ## Digital Lock: 
 file name : dlock.v
 
@@ -49,6 +54,8 @@ An external signal Start will start the division operation, and registers N and 
 
 ## D flip-flop   
 file name : dff.v  
+
+
 
 ## a two agent arbiter
 
