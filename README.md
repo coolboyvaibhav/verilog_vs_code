@@ -77,6 +77,12 @@ Each of the circles represents a state that the machine can be in. Each state co
 **Low level design**
 To see how Verilog helps us design our arbiter, let's go on to our state machine - now we're getting into the low-level design and peeling away the cover of the previous diagram's black box to see how our inputs affect the machine.
 
+## Electronic Voting Machine
+EVM stands for Electronic Voting Machine. It is a device used to electronically record and count votes cast in elections. The Indian Electronic Voting Machine (EVM) system is also termed as ECI-EVM, meaning an EVM specifically designed, manufactured and used for Elections as per election procedure and rules framed by Election Commission of India and documented in manual on EVM , so as to differentiate it from EVMs used   in other countries.
+
+ECI - EVM consists of Ballot Unit (BU), Control Unit (CU) and the later added Voter Verifiable Paper Audit Trail (VVPAT). EVMs come under the overall category of DRE voting machines, or Direct Recording Electronic voting machine systems, which is one of the many voting methodologies available worldwide. ECI-EVMs are considered more efficient and accurate than paper ballots, as they eliminate the possibility of invalid votes due to unclear or improperly marked (stamped) paper ballots, reduce the time required for counting and ensure that a vote is registered for a single candidate only.
+
+
 # ESDCS lab
 ## 8 bit ripple carry adder
 file name : adder.v  
