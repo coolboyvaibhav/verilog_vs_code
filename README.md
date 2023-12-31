@@ -80,8 +80,27 @@ To see how Verilog helps us design our arbiter, let's go on to our state machine
 ## Electronic Voting Machine
 EVM stands for Electronic Voting Machine. It is a device used to electronically record and count votes cast in elections. The Indian Electronic Voting Machine (EVM) system is also termed as ECI-EVM, meaning an EVM specifically designed, manufactured and used for Elections as per election procedure and rules framed by Election Commission of India and documented in manual on EVM , so as to differentiate it from EVMs used   in other countries.
 
-ECI - EVM consists of Ballot Unit (BU), Control Unit (CU) and the later added Voter Verifiable Paper Audit Trail (VVPAT). EVMs come under the overall category of DRE voting machines, or Direct Recording Electronic voting machine systems, which is one of the many voting methodologies available worldwide. ECI-EVMs are considered more efficient and accurate than paper ballots, as they eliminate the possibility of invalid votes due to unclear or improperly marked (stamped) paper ballots, reduce the time required for counting and ensure that a vote is registered for a single candidate only.
+Modules  
+-> Button Control  
+-> Mode Control  
+-> Vote Logger  
+-> Voting  Machine  
 
+###  Button Control
+The vote should be logged only after the button has been pressed for a certain amount of time.  
+Only a single vote should be logged if button is pressed for large duration.
+
+
+### Vote logger
+logs the valid votes if it is in the proper mode.  
+Also used to reset the values at the start of operations.  
+
+### Mode Control
+Used for control of LEDs  
+For voting mode,LEDs light up for a second to indicate the vote has been cast.  
+For tally mode, the LEDs light up in binary numbers to indicat the number of votes received by the candidate.  
+
+ ![Memory models](/resources/images/voting_machine_verilog.png)<br>
 
 # ESDCS lab
 ## 8 bit ripple carry adder
