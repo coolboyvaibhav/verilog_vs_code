@@ -3,6 +3,7 @@
 
 */
 
+//1st method
 module cyclic_lamp (
     light,clk
 );
@@ -36,6 +37,54 @@ always @(posedge clk ) begin
 end
     
 endmodule
+
+//*  second method*/
+
+module cyclic_lamp (
+    light,clk
+);
+output reg [2:0] light;
+input clk;
+
+parameter s0=0,s1=1,s2=2 ;
+parameter RED =3'b001,GREEN=3'b010,YELLOW=3'b100;
+
+reg [0:1] state;
+
+always @(posedge clk ) begin
+    case (state)
+        s0:begin////       in red state
+            
+            state<=s1;
+        end 
+        s1:begin
+            
+            state<=s2;
+        end
+        s2:begin
+            
+            state<=s0;
+        end
+        default:begin
+            state<=s0;
+        end
+    endcase
+end
+
+always @(state) begin
+    case (state)
+        s0:light<=GREEN;
+        s1:light<=YELLOW;
+        s2:light<=RED; 
+        default:light<=RED;  
+    endcase
+    
+end
+    
+endmodule
+
+
+
 
 ///test bench
 
