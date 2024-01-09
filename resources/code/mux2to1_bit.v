@@ -35,4 +35,9 @@ initial begin
     #100 $finish;
 end
 
+initial begin
+    $dumpfile("mux2to1_4bit.vcd");
+    $dumpvars(0,tb_mux2to1_4bit);
+end
+
 endmodule
